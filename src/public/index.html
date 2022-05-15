@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>API Best practices</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .star-rater .star {
+        font-size: 1rem;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <max-app>
+      <title-app></title-app>
+    </max-app>
+
+    <div class="star-rater" id="rater-1" data-rating="3" role="star">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/components/MaxApp.js" type="module"></script>
+  </body>
+</html>

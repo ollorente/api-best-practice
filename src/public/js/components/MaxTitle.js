@@ -1,21 +1,12 @@
-const template = document.createElement("template");
-template.innerHTML = `
-<style>
-  h1 { color: gray; font-weight: 300; }
-  .max-text-center {
-    text-align: center;
-  }
-</style>
-<h1 class="max-text-center">Welcome to API Best practices!</h1>
-`;
-
 class MaxTitle extends HTMLElement {
-  constructor() {
-    super();
-
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(template.content);
+  set title(title) {
+    this.innerHTML = `
+    <style>
+    </style>
+    
+    <h1 class="text-2xl text-center font-light">${title}</h1>
+    `;
   }
 }
 
-window.customElements.define("max-title", MaxTitle);
+customElements.define("max-title", MaxTitle);

@@ -1,11 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));

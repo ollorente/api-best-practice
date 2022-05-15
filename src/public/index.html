@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>API Best practices</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workouts Web Components</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <style>
-      .star-rater .star {
-        font-size: 1rem;
-        color: gray;
-      }
-    </style>
   </head>
-  <body class="bg-gray-100 text-gray-800">
-    <max-app>
-      <title-app></title-app>
-    </max-app>
+  <body class="bg-gray-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <max-carousel></max-carousel>
 
-    <div class="star-rater" id="rater-1" data-rating="3" role="star">
-      <span class="star" data-value="1">&#9733;</span>
-      <span class="star" data-value="2">&#9733;</span>
-      <span class="star" data-value="3">&#9733;</span>
-      <span class="star" data-value="4">&#9733;</span>
-      <span class="star" data-value="5">&#9733;</span>
+          <section class="w-full p-3"></section>
+
+          <div
+            class="px-1"
+            id="rater-1"
+            data-rating="${star.value}"
+            role="star"
+          >
+            <span class="text-gray-400" data-value="1">&#9733;</span>
+            <span class="text-gray-400" data-value="2">&#9733;</span>
+            <span class="text-gray-400" data-value="3">&#9733;</span>
+            <span class="text-gray-400" data-value="4">&#9733;</span>
+            <span class="text-gray-400" data-value="5">&#9733;</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./js/main.js" type="module"></script>
-    <script src="./js/components/MaxApp.js" type="module"></script>
   </body>
 </html>

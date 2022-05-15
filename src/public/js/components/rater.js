@@ -14,7 +14,9 @@ export function Rater(ratingElement) {
   const highlightRating = (rating) => {
     stars.forEach((star) => {
       star.style.color =
-        rating >= star.getAttribute("data-value") ? "yellow" : "gray";
+        rating >= star.getAttribute("data-value")
+          ? "text-yellow-400"
+          : "text-gray-400";
     });
   };
 
